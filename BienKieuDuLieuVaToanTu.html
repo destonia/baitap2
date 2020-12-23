@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biến kiểu dữ liệu và toán tử</title>
+</head>
+<body>
+<button type="button" onclick="diemTB();">Điểm TB</button><br>
+<script>
+    let math=10;
+    let phy=8;
+    let bio=7;
+    let avr=(math+phy+bio)/3
+    function diemTB(){
+        document.write('điểm trung bình '+avr)
+    }
+</script>
+<button type="button" onclick="doF();">Đổi sang F</button><br>
+<script>
+    let C=30;
+    let F=(C/5)*9+32
+    function doF(){
+        document.write('độ F là '+F);
+    }
+</script>
+<button type="button" onclick="Stron();">Diện tích hình tròn</button><br>
+<script>
+    let r=30;
+    let s=r*r*3.14;
+    function Stron(){
+        document.write('diện tích hình tròn r = '+r+' là '+s)
+    }
+</script>
+<button type="button" onclick="Ctron();">Chu vi hình tròn</button>
+<script>
+    let d=40;
+    let c=2*r*3.14;
+    function Ctron(){
+        document.write('Chu vi hình tròn d = '+d+' là '+c)
+    }
+</script>
+</body>
+</html>
