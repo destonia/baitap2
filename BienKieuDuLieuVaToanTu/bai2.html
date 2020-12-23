@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Độ C sang độ F</title>
+</head>
+<body>
+<h1>Đổi nhiệt độ</h1>
+<p>Độ C</p>
+<input id="c" name="c" type="number"><br>
+<p><span>Độ F: </span><span id ="result"></span></p>
+<button type="button" onclick="result()">chuyển đổi</button>
+</body>
+<script>
+
+    function result(){
+        let c=parseFloat(document.getElementById("c").value)
+        let f=c/5*9+32
+        document.getElementById("result").innerHTML=f;
+    }
+</script>
+</html>
