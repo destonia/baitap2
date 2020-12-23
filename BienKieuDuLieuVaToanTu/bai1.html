@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>chương trình tính tiểm tb</title>
+</head>
+<body>
+<h1>điểm trung bình của học sinh</h1>
+<p>Điểm Toán</p>
+<input id="math" name="math" type="number" value="name"><br>
+<p>Điểm Lý</p>
+<input id="phy" name="phy" type="number" value="name"><br>
+<p>Điểm Hóa</p>
+<input id="chem" name="chem" type="number" value="name"><br>
+<p><span>Điểm trung bình: </span><span id ="result"></span></p>
+<button type="button" onclick="result()">Tính điểm TB</button>
+</body>
+<script>
+
+    function result(){
+        let t=parseInt(document.getElementById("math").value)
+        let l=parseInt(document.getElementById("phy").value);
+        let h=parseInt(document.getElementById("chem").value);
+        let rs=(t+l+h)/3;
+        document.getElementById("result").innerHTML=rs;
+    }
+</script>
+</html>
