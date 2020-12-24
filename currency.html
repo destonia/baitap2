@@ -2,9 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Chuyển đổi tiền tệ</title>
+    <style>
+        th{
+            border-spacing: 20px;
+            padding: 5px;
+            text-align: center;
+        }
+        td{
+            border: 1px solid black;
+
+        }
+
+    </style>
 </head>
 <body>
-
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td><input   id="amount" type="number" name="amount"></td>
+        <td>
+            <select style="width: 100%" id="from">
+                <option value="23000">VNĐ</option>
+                <option value="1">USD</option>
+            </select>
+        </td>
+        <td>
+        <select style="width: 100%" id="to">
+            <option value="23000">VNĐ</option>
+            <option value="1">USD</option>
+        </select>
+        </td>
+        <th>
+            <button type="button" onclick="result();">Covert</button>
+        </th>
+    </tr>
+</table>
+<p id="kq"></p>
 </body>
+<script>
+
+    function result(){
+        let vnd= document.getElementById("from").value;
+        let usd= document.getElementById("to").value;
+        let result=document.getElementById("amount").value;
+        let result2=usd*result/vnd;
+
+        document.getElementById("kq").innerHTML="tiền sau khi đổi là: "+result2;
+    }
+
+</script>
 </html>
