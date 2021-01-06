@@ -1,10 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>calculator</title>
 </head>
 <body>
-$END$
+<input  size="30px" name="input1"   id="input1">
+<input  size="30px" name="input2"   id="input2"><br><br>
+<button type="button" onclick="cong()">Cộng</button>
+<button type="button" onclick="tru()">Trừ</button>
+<button type="button" onclick="nhan()">Nhân</button>
+<button type="button" onclick="chia()">Chia</button>
+<p><span id="1"></span><span id="math"></span><span id="2"></span>=</span><span id="kq"></span></p>
 </body>
+<script>
+    function cong(){
+        let input1= +document.getElementById("input1").value;
+        let input2= +document.getElementById("input2").value;
+        let kq=input1+input2;
+        document.getElementById("1").innerHTML=input1;
+        document.getElementById("2").innerHTML=input2;
+        document.getElementById("math").innerHTML="+";
+        document.getElementById("kq").innerHTML=kq
+    }
+    function tru(){
+        let input1= +document.getElementById("input1").value;
+        let input2= +document.getElementById("input2").value;
+        let kq=input1-input2;
+        document.getElementById("1").innerHTML=input1;
+        document.getElementById("2").innerHTML=input2;
+        document.getElementById("math").innerHTML="-";
+        document.getElementById("kq").innerHTML=kq
+    }function nhan(){
+        let input1= +document.getElementById("input1").value;
+        let input2= +document.getElementById("input2").value;
+        let kq=input1*input2;
+        document.getElementById("1").innerHTML=input1;
+        document.getElementById("2").innerHTML=input2;
+        document.getElementById("math").innerHTML="*";
+        document.getElementById("kq").innerHTML=kq
+    }function chia(){
+        let input1= +document.getElementById("input1").value;
+        let input2= +document.getElementById("input2").value;
+        let kq=input1/input2;
+        document.getElementById("1").innerHTML=input1;
+        document.getElementById("2").innerHTML=input2;
+        document.getElementById("math").innerHTML="/";
+        document.getElementById("kq").innerHTML=kq
+    }
+</script>
 </html>

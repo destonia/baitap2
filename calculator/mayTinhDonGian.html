@@ -1,10 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+    <style>
+        table {
+            width: 500px;
+            height: 500px;
+            border-style: solid;
+        }
+
+        tr, td {
+            border: 1px solid black;
+            width: 25%;
+            height: 20%;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-$END$
+<table>
+    <tr>
+        <td colspan="4" id="display">
+        </td>
+    </tr>
+    <tr>
+        <td onclick="clickcell(1)">1</td>
+        <td onclick="clickcell(2)">2</td>
+        <td onclick="clickcell(3)">3</td>
+        <td onclick="clickcell('+')">+</td>
+    </tr>
+    <tr>
+        <td onclick="clickcell(4)">4</td>
+        <td onclick="clickcell(5)">5</td>
+        <td onclick="clickcell(6)">6</td>
+        <td onclick="clickcell('-')">-</td>
+    </tr>
+    <tr>
+        <td onclick="clickcell(7)">7</td>
+        <td onclick="clickcell(8)">8</td>
+        <td onclick="clickcell(9)">9</td>
+        <td onclick="clickcell('*')">*</td>
+    </tr>
+    <tr>
+        <td onclick="reset()">C</td>
+        <td onclick="clickcell(0)">0</td>
+        <td onclick="result()">=</td>
+        <td onclick="clickcell('/')">/</td>
+    </tr>
+</table>
 </body>
+<script>
+    let display = document.getElementById("display");
+
+    function clickcell(number) {
+        display.innerHTML += number;
+    }
+
+    function result() {
+        let listvalue = display.innerHTML
+        let result = eval(listvalue);
+        display.innerHTML = result;
+    }
+
+    function reset() {
+        display.innerHTML = 0;
+    }
+</script>
 </html>
